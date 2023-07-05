@@ -67,6 +67,7 @@ export class TimelinePlugin implements Plugin {
     core.capabilities.registerProvider(() => ({
       timelion: {
         save: true,
+        hide_for_read_only: ['save'],
       },
     }));
     core.savedObjects.registerType(timelineSheetSavedObjectType);
